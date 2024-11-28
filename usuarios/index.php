@@ -133,6 +133,5 @@ $row = mysqli_num_rows($sel);
 
 <?php include '../extend/scripts.php'; ?>
 <script src="../js/validacion.js"></script>
-<script src="../js/scripts.js"></script>
 </body>
 </html>
