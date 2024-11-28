@@ -1,5 +1,7 @@
 <!--llama a la cabecera-->  
-<?php include "../extend/header.php";
+<?php 
+include '../conexion/conexion.php';
+include "../extend/header.php";
 ?>
 <!--pagina principal-->  
 <div class="row">
