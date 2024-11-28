@@ -112,7 +112,7 @@ $row = mysqli_num_rows($sel);
                 <button type="submit" class="btn-floating" ><i class="material-icons">repeat</i></button>
               </form>
               </td>
-              <td><img src="<?php echo $f['foto'] ?>" width="50" class="circle"></td>
+              <td><img src="<?php echo $f['foto'] ?>" class="circle" style="width: 50px; height: 50px;" ></td>
               <td>
                 <?php if ($f['bloqueo']==1): ?>
                   <a href="bloqueo_manual.php?us=<?php echo $f['idUsuario'] ?>&bl=<?php echo $f['bloqueo'] ?>"><i class="material-icons green-text">lock_open</i></a>
@@ -121,7 +121,7 @@ $row = mysqli_num_rows($sel);
                 <?php endif; ?>
               </td>
               <td>
-                <a href="#" class="btn-floating red" onclick="swal({ title: 'Esta seguro que desea eliminar al usuario?', text: 'Al eliminarlo no podra recuperarlo!', type: 'warning', showCancelButton: true, confirmButtonColor: '#3085d6', cancelButtonColor: '#d33', confirmButtonText: 'Si, eliminarlo!' }).then(function () {  location.href='eliminar_usuario.php?id=<?php echo $f['idUsuario'] ?>'; })"><i class="material-icons">clear</i></a>
+                <a href="eliminar_usuario.php" class="btn-floating red" onclick="swal({ title: 'Esta seguro que desea eliminar al usuario?', text: 'Al eliminarlo no podra recuperarlo!', type: 'warning', showCancelButton: true, confirmButtonColor: '#3085d6', cancelButtonColor: '#d33', confirmButtonText: 'Si, eliminarlo!' }).then(function () {  location.href='eliminar_usuario.php?id=<?php echo $f['idUsuario'] ?>'; })"><i class="material-icons">clear</i></a>
               </td>
             </tr>
             <?php } ?>
@@ -133,5 +133,6 @@ $row = mysqli_num_rows($sel);
 
 <?php include '../extend/scripts.php'; ?>
 <script src="../js/validacion.js"></script>
+<script src="../js/scripts.js"></script>
 </body>
 </html>
