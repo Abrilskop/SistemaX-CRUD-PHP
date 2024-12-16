@@ -1,4 +1,12 @@
 
+// Conversion a Mayusculas
+function may(obj, id)
+{
+	obj=obj.toUpperCase();
+	document.getElementById(id).value=obj;
+}
+//Llamar etiqueta select
+$('select').material_select();
 // validacion del nick de usuario
 $('#nick').change(function() 
             {
