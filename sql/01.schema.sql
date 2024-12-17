@@ -121,7 +121,25 @@ ENGINE = InnoDB;
 -- Agregar precio a la tabla `Productos`
 -- -----------------------------------------------------
 ALTER TABLE `sistemax`.`Productos`
-ADD COLUMN `precio` DECIMAL(10,2) NOT NULL AFTER `Stock`;
+ADD COLUMN `Precio` DECIMAL(10,2) NOT NULL AFTER `Stock`;
+
+-- -----------------------------------------------------
+-- Agregar bloqueo a la tabla `Productos`
+-- -----------------------------------------------------
+ALTER TABLE `sistemax`.`Productos`
+ADD COLUMN `Bloqueo` INT(1) NOT NULL AFTER `Precio`;
+
+-- -----------------------------------------------------
+-- Agregar estadoa la tabla `clientes`
+-- -----------------------------------------------------
+ALTER TABLE `sistemax`.`Clientes`
+ADD COLUMN `Estado` VARCHAR(45) NOT NULL AFTER `Telefono`;
+
+-- -----------------------------------------------------
+-- Agregar bloqueo a la tabla `clientes`
+-- -----------------------------------------------------
+ALTER TABLE `sistemax`.`Clientes`
+ADD COLUMN `Bloqueo` INT(1) NOT NULL AFTER `Estado`;
 
 -- -----------------------------------------------------
 -- Agregar registros
@@ -166,18 +184,18 @@ VALUES
 (9, '2024-11-09', 'Compra de accesorios de oficina', 9),
 (10, '2024-11-10', 'Venta de equipos de fotografía', 10);
 
-INSERT INTO `sistemax`.`Productos` (`Nombre`, `Estado`, `Stock`, `precio`)
+INSERT INTO `sistemax`.`Productos` (`Nombre`, `Estado`, `Stock`, `Precio`, `Bloqueo`)
 VALUES
-('Laptop', 'Nuevo', 100, 799.99),
-('Silla de oficina', 'Nuevo', 50, 49.99),
-('Martillo', 'Usado', 200, 15.99),
-('Olla', 'Nuevo', 30, 29.99),
-('Monitor', 'Nuevo', 75, 199.99),
-('Camiseta', 'Nuevo', 150, 19.99),
-('Pico', 'Usado', 100, 12.99),
-('Licuadora', 'Nuevo', 40, 99.99),
-('Cuaderno', 'Nuevo', 500, 2.99),
-('Cámara fotográfica', 'Nuevo', 60, 299.99);
+('Laptop', 'Nuevo', 100, 799.99, 0),
+('Silla de oficina', 'Nuevo', 50, 49.99, 0),
+('Martillo', 'Usado', 200, 15.99, 0),
+('Olla', 'Nuevo', 30, 29.99, 0),
+('Monitor', 'Nuevo', 75, 199.99, 0),
+('Camiseta', 'Nuevo', 150, 19.99, 0),
+('Pico', 'Usado', 100, 12.99, 0),
+('Licuadora', 'Nuevo', 40, 99.99, 0),
+('Cuaderno', 'Nuevo', 500, 2.99, 0),
+('Cámara fotográfica', 'Nuevo', 60, 299.99, 0);
 
 INSERT INTO `sistemax`.`DetalleVenta` (`Cantidad`, `Descuento`, `idProductos`, `idVenta`)
 VALUES
