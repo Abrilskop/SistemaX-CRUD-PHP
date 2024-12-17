@@ -11,7 +11,7 @@
       <br>
       <br>
       <br>
-      <a href="" class="black-text" >Gianella Alexandra</a>
+      <a href="" class="black-text" >Alexandra Ramos</a>
       <a href="" class="black-text">uberpot.ia@gmail.com</a>
     </div>
   </li>
@@ -24,13 +24,13 @@
   <li><a href="../detalleVenta/index.php"><i class="material-icons">insert_chart</i> DETALLE DE VENTA</a></li>
   <li><div class="divider"></div></li>
 
-  <li><a href="../productos/indexp.php"><i class="material-icons">category</i> ALTA DE PRODUCTOS</a></li>
+  <li><a href="../productos/index.php"><i class="material-icons">category</i> ALTA DE PRODUCTOS</a></li>
   <li><div class="divider"></div></li>
 
   <li><a href="../usuarios/index.php"><i class="material-icons">group_add</i> ALTA USUARIOS</a></li>
   <li><div class="divider"></div></li>
 
-  <li><a href="../venta/indexv.php"><i class="material-icons">shopping_cart</i> ALTA DE VENTA</a></li>
+  <li><a href="../venta/index.php"><i class="material-icons">shopping_cart</i> ALTA DE VENTA</a></li>
   <li><div class="divider"></div></li>
 
   <li><a href="../index.php"><i class="material-icons">exit_to_app</i> Salir</a></li>
